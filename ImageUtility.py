@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import math
-from myGpuFeatures import myGpuFeatures
+# from myGpuFeatures import myGpuFeatures
 # from scipy.stats import mode
 
 class Method():
@@ -192,7 +192,7 @@ class Method():
         if len(matches) == 0:
             return (totalStatus, [0, 0], 0)
         # 计算视角变换矩阵
-        H1 = cv2.getAffineTransform(ptsA, ptsB)
+        # H1 = cv2.getAffineTransform(ptsA, ptsB)
         # print("H1")
         # print(H1)
         (H, status) = cv2.findHomography(ptsA, ptsB, cv2.RANSAC, 3, 0.9)
